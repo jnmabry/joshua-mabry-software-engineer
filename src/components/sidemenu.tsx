@@ -2,7 +2,7 @@ import React from "react";
 import SocialLinks from "./social-links";
 import ColorModeSelector from "./color-mode-selector";
 
-const SideMenu = ({ menuItems, scrollToSection }) => {
+const SideMenu = ({ menuItems, scrollToSection, darkMode, setDarkMode }) => {
   return (
     <div className="sidemenu">
       <span className="logo">
@@ -21,7 +21,7 @@ const SideMenu = ({ menuItems, scrollToSection }) => {
       </div> */}
       <div className="bottom-section">
         <SocialLinks />
-        <ColorModeSelector />
+        <ColorModeSelector darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
     </div>
   );

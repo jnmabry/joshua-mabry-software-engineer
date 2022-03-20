@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SEO from "./seo";
 import Menu from "./menu";
 import SideMenu from "./sidemenu";
@@ -8,16 +8,23 @@ import Helmet from "react-helmet";
 import "../styles/main.scss";
 
 export default function Layout({ children, scrollToSection }) {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <>
       <Helmet
         bodyAttributes={{
-          class: "dark-mode",
+          class: darkMode ? "dark-mode" : "light-mode",
         }}
       />
       <SEO></SEO>
       <Menu menuItems={menuItems} scrollToSection={scrollToSection} />
-      <SideMenu menuItems={menuItems} scrollToSection={scrollToSection} />
+      <SideMenu
+        menuItems={menuItems}
+        scrollToSection={scrollToSection}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      />
       <div className="particles-container">
         <Particles
           params={{
@@ -30,15 +37,13 @@ export default function Layout({ children, scrollToSection }) {
                 },
               },
               color: {
-                // value: !darkMode.value ? "#000" : "#fff",
-                value: "#FFF",
+                value: !darkMode ? "#000" : "#fff",
               },
               shape: {
                 type: "circle",
                 stroke: {
                   width: 0,
-                  // color: !darkMode.value ? "#000" : "#fff",
-                  color: "#FFF",
+                  color: !darkMode ? "#000" : "#fff",
                 },
                 polygon: {
                   nb_sides: 5,
@@ -67,9 +72,7 @@ export default function Layout({ children, scrollToSection }) {
               line_linked: {
                 enable: true,
                 distance: 150,
-                // color: !darkMode.value ? "#000" : "#fff",
-                color: "#FFF",
-
+                color: !darkMode ? "#000" : "#fff",
                 opacity: 0.25,
                 width: 1,
               },
