@@ -8,7 +8,7 @@ const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, defaultDescription, siteUrl, defaultImage } =
+  const { defaultTitle, siteUrl, defaultDescription, defaultImage } =
     site.siteMetadata;
 
   const seo = {
@@ -60,7 +60,7 @@ const query = graphql`
       siteMetadata {
         defaultTitle: title
         defaultDescription: description
-        siteUrl: url
+        siteUrl
         defaultImage: image
       }
     }
