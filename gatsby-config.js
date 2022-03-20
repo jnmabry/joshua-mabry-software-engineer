@@ -2,7 +2,9 @@
 module.exports = {
   siteMetadata: {
     title: `Joshua Mabry - Software Engineer`,
-    siteUrl: `https://www.joshuamabry.com`,
+    url: `https://www.joshuamabry.com`,
+    description: ``,
+    image: ``,
   },
   plugins: [
     "gatsby-plugin-sass",
