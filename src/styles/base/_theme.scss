@@ -1,0 +1,224 @@
+$dark: #000;
+$light: #fff;
+
+body.dark-mode {
+  background-color: $dark;
+  color: $light;
+  .sidemenu {
+    background-color: $dark;
+    border-right: 1px solid $light;
+    button {
+      i.fa-long-arrow-alt-up,
+      i.fa-long-arrow-alt-down {
+        color: $light;
+      }
+    }
+    .pages {
+      color: $light;
+    }
+  }
+  .stroked {
+    -webkit-text-fill-color: $dark;
+    -webkit-text-stroke-color: $light;
+    -webkit-text-stroke-width: 1px;
+  }
+  .logo {
+    border: 2px solid $light;
+    background-color: $dark;
+    button {
+      color: $light;
+    }
+  }
+  .menu {
+    a {
+      color: $light;
+    }
+    .current-section {
+      background-color: $light;
+    }
+    .close-icon {
+      color: $light;
+    }
+  }
+  header {
+    .hamburger-icon {
+      color: $light;
+      i {
+        background-color: $dark;
+      }
+    }
+  }
+  .social a {
+    color: $light;
+  }
+  .toggle-theme {
+    label:after {
+      background: $dark;
+    }
+  }
+  .color-mode {
+    color: $light;
+    button.dark {
+      background-color: $dark;
+      color: $light;
+      border: 2px solid $light;
+    }
+    button.light {
+      background-color: $light;
+    }
+    hr {
+      border: 2px solid $light;
+    }
+  }
+  section {
+    .project {
+      border: 1px solid $light;
+      button {
+        border: 1px solid $light;
+        background-color: $light;
+        color: $dark;
+      }
+      .image {
+        background: $light;
+      }
+    }
+    .experiment {
+      background-color: $light;
+    }
+    &.contact {
+      form {
+        input,
+        textarea {
+          border: 1px solid $light;
+          background-color: $light;
+        }
+        button {
+          background: $dark;
+          border: 1px solid $light;
+          color: $light;
+        }
+      }
+    }
+  }
+}
+
+body.light-mode {
+  background-color: $light;
+  color: $dark;
+  .sidemenu {
+    background-color: $light;
+    border-right: 1px solid $dark;
+    button {
+      i.fa-long-arrow-alt-up,
+      i.fa-long-arrow-alt-down {
+        color: $dark;
+      }
+    }
+    .pages {
+      color: $dark;
+    }
+  }
+  .stroked {
+    -webkit-text-fill-color: $light;
+    -webkit-text-stroke-color: $dark;
+    -webkit-text-stroke-width: 1.5px;
+  }
+  .logo {
+    border: 2px solid $dark;
+    background-color: $light;
+    button {
+      color: $dark;
+    }
+  }
+  .menu {
+    a {
+      color: $dark;
+    }
+    .current-section {
+      background-color: $light;
+    }
+    .close-icon {
+      color: $light;
+    }
+  }
+  header {
+    .hamburger-icon {
+      color: $dark;
+      i {
+        background-color: $light;
+      }
+    }
+  }
+  .social a {
+    color: $dark;
+  }
+  .toggle-theme {
+    label:after {
+      background: $light;
+    }
+  }
+  .color-mode {
+    color: $dark;
+    button.light {
+      background-color: $dark;
+      color: $light;
+      border: 2px solid $dark;
+    }
+    button.dark {
+      border: 2px solid $dark;
+      background-color: $light;
+    }
+    hr {
+      border: 1px solid $dark;
+    }
+  }
+  section {
+    .project {
+      border: 1px solid $dark;
+      button {
+        border: 1px solid $dark;
+        background: $dark;
+        color: $light;
+      }
+      .image {
+        background: $dark;
+      }
+    }
+    .experiment {
+      background-color: $dark;
+    }
+    &.contact {
+      form {
+        input,
+        textarea {
+          border: 1px solid $dark;
+          background-color: $light;
+        }
+        button {
+          background: $dark;
+          border: 1px solid $dark;
+          color: $light;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  body.dark-mode {
+    .social {
+      background: $dark;
+      -webkit-box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
+      -moz-box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
+      box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
+    }
+  }
+  body.light-mode {
+    .social {
+      background: $light;
+      -webkit-box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
+    }
+  }
+}

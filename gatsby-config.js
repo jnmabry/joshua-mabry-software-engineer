@@ -3,7 +3,9 @@ module.exports = {
   siteMetadata: {
     title: `Joshua Mabry - Software Engineer`,
     siteUrl: `https://www.joshuamabry.com`,
-    description: ``,
+    description:
+      `Joshua Mabry is a Software Engineer who specializes in full-stack development using frameworks such as Angular, React and Ruby on Rails.` +
+      `While mainly focusing on software developement, he also enjoys UI design.`,
     image: ``,
   },
   plugins: [
