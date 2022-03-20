@@ -1,6 +1,7 @@
 import React from "react";
 import SEO from "./seo";
 import Menu from "./menu";
+import SideMenu from "./sidemenu";
 import Particles from "react-tsparticles";
 import Helmet from "react-helmet";
 
@@ -16,6 +17,7 @@ export default function Layout({ children, scrollToSection }) {
       />
       <SEO></SEO>
       <Menu menuItems={menuItems} scrollToSection={scrollToSection} />
+      <SideMenu menuItems={menuItems} scrollToSection={scrollToSection} />
       <div className="particles-container">
         <Particles
           params={{

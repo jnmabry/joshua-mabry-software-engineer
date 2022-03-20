@@ -4,6 +4,7 @@ body {
   scroll-behavior: smooth;
   transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
   overflow-x: hidden;
+  margin: 0px;
 }
 
 .particles-container {
@@ -22,6 +23,10 @@ body {
     height: 100vh !important;
     width: 100vw !important;
   }
+}
+
+footer {
+  display: grid;
 }
 
 form {

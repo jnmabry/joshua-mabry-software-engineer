@@ -3,7 +3,10 @@
 @import "base/_layout";
 @import "base/_theme";
 @import "base/_typography";
+@import "base/_header";
 
 /* === Component Stylings === */
 @import "components/_menu";
-@import "components/project-card";
+@import "components/_project-card";
+@import "components/_social-links";
+@import "components/_color-mode-selector";
