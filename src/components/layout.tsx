@@ -9,6 +9,7 @@ import "../styles/main.scss";
 
 export default function Layout({ children, scrollToSection }) {
   const [darkMode, setDarkMode] = useState(false);
+  const [menuToggled, setMenuToggled] = useState(false);
 
   return (
     <>
@@ -18,7 +19,14 @@ export default function Layout({ children, scrollToSection }) {
         }}
       />
       <SEO></SEO>
-      <Menu menuItems={menuItems} scrollToSection={scrollToSection} />
+      <button id="hamburger" onClick={() => setMenuToggled(!menuToggled)}>
+        <i className="fa fa-bars"></i>
+      </button>
+      <Menu
+        menuItems={menuItems}
+        scrollToSection={scrollToSection}
+        toggled={menuToggled}
+      />
       <SideMenu
         menuItems={menuItems}
         scrollToSection={scrollToSection}

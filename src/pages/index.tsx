@@ -56,6 +56,7 @@ class IndexPage extends React.Component {
           <div className="image">
             <img src="" alt="" />
           </div>
+          s
         </section>
         <section className="portfolio" id="projects">
           <h2 className="stroked">02.</h2>
@@ -64,13 +65,7 @@ class IndexPage extends React.Component {
             Bacon ipsum dolor amet kielbasa ham hock shoulder chicken capicola
             pork chop leberkas pork landjaeger frankfurter sausage flank t-bone.
             Filet mignon t-bone spare ribs bacon tongue bresaola hamburger
-            meatloaf turkey tri-tip beef ribs buffalo ribeye shoulder. Jowl
-            drumstick biltong doner chicken, kevin short loin landjaeger.
-            Buffalo shankle biltong tri-tip. Pancetta tenderloin frankfurter
-            tongue t-bone, pastrami prosciutto turkey spare ribs alcatra pork
-            belly brisket ham filet mignon burgdoggen. Sirloin pork belly jerky,
-            jowl chislic turkey meatball tenderloin corned beef drumstick pork
-            beef pork loin cupim bresaola.
+            meatloaf turkey tri-tip beef ribs buffalo ribeye shoulder.
           </p>
           <div className="projects">
             {this.projects.map((project, index) => {
@@ -87,13 +82,7 @@ class IndexPage extends React.Component {
             Bacon ipsum dolor amet kielbasa ham hock shoulder chicken capicola
             pork chop leberkas pork landjaeger frankfurter sausage flank t-bone.
             Filet mignon t-bone spare ribs bacon tongue bresaola hamburger
-            meatloaf turkey tri-tip beef ribs buffalo ribeye shoulder. Jowl
-            drumstick biltong doner chicken, kevin short loin landjaeger.
-            Buffalo shankle biltong tri-tip. Pancetta tenderloin frankfurter
-            tongue t-bone, pastrami prosciutto turkey spare ribs alcatra pork
-            belly brisket ham filet mignon burgdoggen. Sirloin pork belly jerky,
-            jowl chislic turkey meatball tenderloin corned beef drumstick pork
-            beef pork loin cupim bresaola.
+            meatloaf turkey tri-tip beef ribs buffalo ribeye shoulder.
           </p>
           <div className="experiments-container">
             <div className="experiment"></div>
@@ -116,7 +105,12 @@ class IndexPage extends React.Component {
             meatloaf turkey tri-tip beef ribs buffalo ribeye shoulder. Jowl
             drumstick biltong doner chicken, kevin short loin landjaeger.
           </p>
-          <form id="contact">
+          <form
+            id="contact"
+            name="Contact Form"
+            method="POST"
+            data-netlify="true"
+          >
             <label htmlFor="name">Name</label>
             <input name="name" id="name" type="text" required />
             <label htmlFor="email">Email</label>
@@ -143,12 +137,12 @@ class IndexPage extends React.Component {
 
   projects = [
     {
-      title: "The AGDA Awards",
-      role: "UI Design and Front-end Development",
-      technologies: "CSS, HTML, TypeScript, Gulp",
+      title: "Software Engineer Portfolio Site",
+      role: "Development and UI Design",
+      technologies: "Gatsby JS, React, Sass, Contentful and Netlify",
       description:
         "The American Graphic Design & Advertising Awards 'AGDA' began as American Corporate Identity and was created by logo expert David E. Carter.",
-      url: "localhost:8000",
+      url: "www.joshuamabry.com",
     },
     {
       title: "The AGDA Awards",

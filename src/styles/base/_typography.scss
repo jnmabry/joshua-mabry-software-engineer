@@ -47,6 +47,13 @@ p {
   font-family: $secondary-font;
   font-weight: 300;
 }
+.menu {
+  button {
+    font-family: $secondary-font;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
 .menu li a.active {
   font-weight: 700;
   .current-section {
@@ -56,6 +63,7 @@ p {
 .menu li a:hover {
   font-weight: 700;
 }
+
 input,
 label,
 button {
@@ -65,5 +73,13 @@ button {
 .sidemenu {
   .pages {
     font-family: $secondary-font;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu {
+    // display: none;
+    font-size: 24px;
+    line-height: 48px;
   }
 }

@@ -39,6 +39,11 @@ body.dark-mode {
     .close-icon {
       color: $light;
     }
+    button {
+      background-color: $dark;
+      color: $light;
+      border: 1px solid $light;
+    }
   }
   header {
     .hamburger-icon {
@@ -140,6 +145,11 @@ body.light-mode {
     .close-icon {
       color: $light;
     }
+    button {
+      background-color: $dark;
+      color: $light;
+      border: 1px solid $light;
+    }
   }
   header {
     .hamburger-icon {
@@ -204,13 +214,16 @@ body.light-mode {
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 900px) {
   body.dark-mode {
     .social {
       background: $dark;
       -webkit-box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
       -moz-box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
       box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
+    }
+    .menu {
+      background-color: $dark;
     }
   }
   body.light-mode {
@@ -219,6 +232,9 @@ body.light-mode {
       -webkit-box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
       box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
+    }
+    .menu {
+      background-color: $light;
     }
   }
 }
