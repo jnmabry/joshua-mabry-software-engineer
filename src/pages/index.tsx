@@ -56,7 +56,6 @@ class IndexPage extends React.Component {
           <div className="image">
             <img src="" alt="" />
           </div>
-          s
         </section>
         <section className="portfolio" id="projects">
           <h2 className="stroked">02.</h2>

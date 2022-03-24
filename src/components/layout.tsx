@@ -20,19 +20,15 @@ export default function Layout({ children, scrollToSection }) {
       />
       <SEO></SEO>
       <button id="hamburger" onClick={() => setMenuToggled(!menuToggled)}>
-        <i className="fa fa-bars"></i>
+        <i className={`fa ${menuToggled ? "fa-times" : "fa-bars"}`}></i>
       </button>
       <Menu
         menuItems={menuItems}
         scrollToSection={scrollToSection}
         toggled={menuToggled}
+        setToggled={setMenuToggled}
       />
-      <SideMenu
-        menuItems={menuItems}
-        scrollToSection={scrollToSection}
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-      />
+      <SideMenu darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="particles-container">
         <Particles
           params={{
@@ -143,7 +139,9 @@ export default function Layout({ children, scrollToSection }) {
       </div>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()} Designed and coded by Joshua Mabry
+        <div>
+          © {new Date().getFullYear()} Designed and coded by Joshua Mabry
+        </div>
       </footer>
     </>
   );

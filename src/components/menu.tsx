@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 export interface MenuParams {
   menuItems: { title: string; link: string }[];
@@ -6,9 +6,15 @@ export interface MenuParams {
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {};
   toggled: boolean;
+  setToggled: Dispatch<SetStateAction<boolean>>;
 }
 
-const Menu = ({ menuItems, scrollToSection, toggled }: MenuParams) => {
+const Menu = ({
+  menuItems,
+  scrollToSection,
+  toggled,
+  setToggled,
+}: MenuParams) => {
   return (
     <div className={`menu ${toggled ? "open" : "closed"}`}>
       <nav>
@@ -16,7 +22,13 @@ const Menu = ({ menuItems, scrollToSection, toggled }: MenuParams) => {
           {menuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a href={item.link} onClick={(e) => scrollToSection(e)}>
+                <a
+                  href={item.link}
+                  onClick={(e) => {
+                    scrollToSection(e);
+                    setToggled(!toggled);
+                  }}
+                >
                   {item.title}
                   <span className="current-section"></span>
                 </a>
@@ -31,9 +43,6 @@ const Menu = ({ menuItems, scrollToSection, toggled }: MenuParams) => {
           </li>
         </ul>
       </nav>
-      {/* <button>
-        <i className="fa fa-x"></i>
-      </button> */}
     </div>
   );
 };
