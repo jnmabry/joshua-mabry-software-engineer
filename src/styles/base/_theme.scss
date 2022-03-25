@@ -22,7 +22,7 @@ body.dark-mode {
     -webkit-text-stroke-color: $light;
     -webkit-text-stroke-width: 1px;
   }
-  .logo {
+  #logo {
     border: 2px solid $light;
     background-color: $dark;
     button {
@@ -45,12 +45,10 @@ body.dark-mode {
       border: 1px solid $light;
     }
   }
-  header {
-    .hamburger-icon {
-      color: $light;
-      i {
-        background-color: $dark;
-      }
+  #hamburger {
+    color: $light;
+    i {
+      background-color: $dark;
     }
   }
   .social a {
@@ -128,7 +126,7 @@ body.light-mode {
     -webkit-text-stroke-color: $dark;
     -webkit-text-stroke-width: 1.5px;
   }
-  .logo {
+  #logo {
     border: 2px solid $dark;
     background-color: $light;
     button {
@@ -151,12 +149,10 @@ body.light-mode {
       border: 1px solid $light;
     }
   }
-  header {
-    .hamburger-icon {
-      color: $dark;
-      i {
-        background-color: $light;
-      }
+  #hamburger {
+    color: $dark;
+    i {
+      background-color: $light;
     }
   }
   .social a {
