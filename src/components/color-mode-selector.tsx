@@ -6,6 +6,7 @@ const ColorModeSelector = ({ darkMode, setDarkMode }) => {
       <input
         type="checkbox"
         id="switch"
+        checked={darkMode}
         onClick={() => setDarkMode(!darkMode)}
       />
       <label htmlFor="switch">Toggle</label>
