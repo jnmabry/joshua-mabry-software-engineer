@@ -4,6 +4,9 @@ $light: #fff;
 body.dark-mode {
   background-color: $dark;
   color: $light;
+  a {
+    color: $light;
+  }
   .sidemenu {
     background-color: $dark;
     border-right: 1px solid $light;
@@ -109,6 +112,9 @@ body.dark-mode {
 body.light-mode {
   background-color: $light;
   color: $dark;
+  a {
+    color: $dark;
+  }
   .sidemenu {
     background-color: $light;
     border-right: 1px solid $dark;

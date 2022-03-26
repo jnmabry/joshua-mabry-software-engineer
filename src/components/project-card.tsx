@@ -14,9 +14,18 @@ const ProjectCard = ({ project }) => {
         <p>
           <b>Description:</b> {project.description}
         </p>
-        <a href={project.url} target="_blank" rel="noopener noreferrer">
-          <button>View Project Live</button>
-        </a>
+
+        {project.url && (
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
+            <button>View Project Live</button>
+          </a>
+        )}
+
+        {project.github && (
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
+            <button>View Github Repo</button>
+          </a>
+        )}
       </div>
       <div className="image"></div>
     </div>

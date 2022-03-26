@@ -9,7 +9,7 @@ import Helmet from "react-helmet";
 import "../styles/main.scss";
 
 export default function Layout({ children, scrollToSection }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [menuToggled, setMenuToggled] = useState(false);
 
   return (
@@ -145,11 +145,11 @@ export default function Layout({ children, scrollToSection }) {
         />
       </div>
       <main>{children}</main>
-      <footer>
+      {/* <footer>
         <div>
           © {new Date().getFullYear()} Designed and coded by Joshua Mabry
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }
@@ -157,6 +157,6 @@ export default function Layout({ children, scrollToSection }) {
 const menuItems = [
   { title: "01. About Me", link: "#about" },
   { title: "02. Projects", link: "#projects" },
-  { title: "03. Experiments", link: "#experiments" },
-  { title: "04. Let's Talk", link: "#contact" },
+  // { title: "03. Experiments", link: "#experiments" },
+  { title: "03. Let's Talk", link: "#contact" },
 ];
