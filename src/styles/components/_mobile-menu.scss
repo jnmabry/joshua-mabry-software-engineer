@@ -1,0 +1,77 @@
+.mobile-menu {
+  z-index: 200;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    li {
+      cursor: pointer;
+      display: flex;
+      a {
+        text-decoration: none;
+        display: flex;
+      }
+      .current-section {
+        transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+        height: 10px;
+        border-radius: 10px;
+        margin: 10px 0px 0px 3px;
+        opacity: 0;
+      }
+    }
+    li:last-child {
+      padding-top: 30px;
+      button {
+        width: 100%;
+      }
+    }
+  }
+  button {
+    padding: 10px 15px;
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &.open {
+    right: 0px !important;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  &.closed {
+    right: 100vw;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .bottom-section {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    justify-self: end;
+    position: absolute;
+    bottom: 30px;
+    .social {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 901px) {
+  #hamburger {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+}

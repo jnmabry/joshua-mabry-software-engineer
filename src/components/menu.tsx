@@ -5,30 +5,17 @@ export interface MenuParams {
   scrollToSection: (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {};
-  toggled: boolean;
-  setToggled: Dispatch<SetStateAction<boolean>>;
 }
 
-const Menu = ({
-  menuItems,
-  scrollToSection,
-  toggled,
-  setToggled,
-}: MenuParams) => {
+const Menu = ({ menuItems, scrollToSection }: MenuParams) => {
   return (
-    <div className={`menu ${toggled ? "open" : "closed"}`}>
+    <div className="menu">
       <nav>
         <ul>
           {menuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a
-                  href={item.link}
-                  onClick={(e) => {
-                    scrollToSection(e);
-                    setToggled(!toggled);
-                  }}
-                >
+                <a href={item.link} onClick={(e) => scrollToSection(e)}>
                   {item.title}
                   <span className="current-section"></span>
                 </a>

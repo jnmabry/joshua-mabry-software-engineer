@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SEO from "./seo";
 import Menu from "./menu";
+import MobileMenu from "./mobile-menu";
 import SideMenu from "./sidemenu";
 import Particles from "react-tsparticles";
 import Helmet from "react-helmet";
@@ -25,12 +26,15 @@ export default function Layout({ children, scrollToSection }) {
       <button id="hamburger" onClick={() => setMenuToggled(!menuToggled)}>
         <i className={`fa ${menuToggled ? "fa-times" : "fa-bars"}`}></i>
       </button>
-      <Menu
+      <Menu menuItems={menuItems} scrollToSection={scrollToSection} />
+      <MobileMenu
         menuItems={menuItems}
         scrollToSection={scrollToSection}
         toggled={menuToggled}
         setToggled={setMenuToggled}
-      />
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      ></MobileMenu>
       <SideMenu darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="particles-container">
         <Particles

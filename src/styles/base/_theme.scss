@@ -29,7 +29,8 @@ body.dark-mode {
       color: $light;
     }
   }
-  .menu {
+  .menu,
+  .mobile-menu {
     a {
       color: $light;
     }
@@ -133,7 +134,8 @@ body.light-mode {
       color: $dark;
     }
   }
-  .menu {
+  .menu,
+  .mobile-menu {
     a {
       color: $dark;
     }
@@ -212,24 +214,12 @@ body.light-mode {
 
 @media screen and (max-width: 900px) {
   body.dark-mode {
-    .social {
-      background: $dark;
-      -webkit-box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
-      -moz-box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
-      box-shadow: 0px -2px 36px -25px rgba(255, 255, 255, 0.75);
-    }
-    .menu {
+    .mobile-menu {
       background-color: $dark;
     }
   }
   body.light-mode {
-    .social {
-      background: $light;
-      -webkit-box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px -2px 36px -25px rgba(0, 0, 0, 0.75);
-    }
-    .menu {
+    .mobile-menu {
       background-color: $light;
     }
   }

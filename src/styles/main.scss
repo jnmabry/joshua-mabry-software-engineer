@@ -1,3 +1,4 @@
+/* === Self Hosted Fonts === */
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.ttf");
@@ -26,6 +27,7 @@
 
 /* === Component Stylings === */
 @import "components/_menu";
+@import "components/_mobile-menu";
 @import "components/_project-card";
 @import "components/_social-links";
 @import "components/_color-mode-selector";
