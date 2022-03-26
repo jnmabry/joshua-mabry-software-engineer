@@ -108,6 +108,7 @@ class IndexPage extends React.Component {
             id="contact"
             name="Contact Form"
             method="POST"
+            data-netlify-recaptcha="true"
             data-netlify="true"
           >
             <input type="hidden" name="form-name" value="Contact Form" />
@@ -126,6 +127,7 @@ class IndexPage extends React.Component {
               rows={10}
               required
             ></textarea>
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit">Send Message</button>
           </form>
         </section>
