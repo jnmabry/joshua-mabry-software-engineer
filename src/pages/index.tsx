@@ -110,6 +110,7 @@ class IndexPage extends React.Component {
             method="POST"
             data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="Contact Form" />
             <label htmlFor="name">Name</label>
             <input name="name" id="name" type="text" required />
             <label htmlFor="email">Email</label>
@@ -121,13 +122,11 @@ class IndexPage extends React.Component {
               noresize="true"
               name="message"
               id="message"
-              cols="30"
-              rows="10"
+              cols={30}
+              rows={10}
               required
             ></textarea>
-            <button type="submit" form="contact">
-              Send Message
-            </button>
+            <button type="submit">Send Message</button>
           </form>
         </section>
       </Layout>

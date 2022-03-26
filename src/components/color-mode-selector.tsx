@@ -8,6 +8,7 @@ const ColorModeSelector = ({ darkMode, setDarkMode }) => {
         id="switch"
         checked={darkMode}
         onClick={() => setDarkMode(!darkMode)}
+        readOnly
       />
       <label htmlFor="switch">Toggle</label>
     </div>
