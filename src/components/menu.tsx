@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
+import resumePdf from "../static/joshua_mabry_resume.pdf";
 
 export interface MenuParams {
   menuItems: { title: string; link: string }[];
@@ -23,10 +24,10 @@ const Menu = ({ menuItems, scrollToSection }: MenuParams) => {
             );
           })}
           <li>
-            <button>
+            <a href={resumePdf} target="_blank">
               <i className="fa fa-download"></i>
               Resume
-            </button>
+            </a>
           </li>
         </ul>
       </nav>

@@ -35,7 +35,7 @@ class IndexPage extends React.Component {
             <br />
             <span className="stroked"> full-stack development </span>
             <br />
-            and <span className="stroked"> UX/UI design. </span>
+            and <span className="stroked"> UI design. </span>
           </h1>
         </section>
         <section className="about-me" id="about">
@@ -78,20 +78,6 @@ class IndexPage extends React.Component {
             })}
           </div>
         </section>
-        {/* <section className="experiments" id="experiments">
-          <h2 className="stroked">03.</h2>
-          <h2>Experiments</h2>
-          <div className="experiments-container">
-            <div className="experiment"></div>
-            <div className="experiment"></div>
-            <div className="experiment"></div>
-            <div className="experiment"></div>
-            <div className="experiment"></div>
-            <div className="experiment"></div>
-            <div className="experiment"></div>
-            <div className="experiment"></div>
-          </div>
-        </section> */}
         <section className="contact" id="contact">
           <h2 className="stroked">03.</h2>
           <h2>Let's Talk</h2>
@@ -116,7 +102,6 @@ class IndexPage extends React.Component {
             <input name="subject" id="subject" type="text" required />
             <label htmlFor="message">Message</label>
             <textarea
-              noresize="true"
               name="message"
               id="message"
               cols={30}
@@ -134,7 +119,7 @@ class IndexPage extends React.Component {
     {
       title: "Software Engineer Portfolio Site",
       role: "Development and UI Design",
-      technologies: "Gatsby JS, React, Sass, Contentful and Netlify",
+      technologies: "GatsbyJS, React, Sass and Netlify",
       description:
         "A software engineering portfolio site that follows the JAMstack approach.",
       github: "https://github.com/jnmabry/joshua-mabry-software-engineer",

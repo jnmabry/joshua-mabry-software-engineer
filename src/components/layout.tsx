@@ -152,11 +152,6 @@ export default function Layout({ children, scrollToSection }) {
         />
       </div>
       <main>{children}</main>
-      {/* <footer>
-        <div>
-          © {new Date().getFullYear()} Designed and coded by Joshua Mabry
-        </div>
-      </footer> */}
     </>
   );
 }
@@ -164,6 +159,5 @@ export default function Layout({ children, scrollToSection }) {
 const menuItems = [
   { title: "01. About Me", link: "#about" },
   { title: "02. Projects", link: "#projects" },
-  // { title: "03. Experiments", link: "#experiments" },
   { title: "03. Let's Talk", link: "#contact" },
 ];

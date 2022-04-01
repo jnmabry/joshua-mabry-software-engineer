@@ -1,4 +1,4 @@
-$dark: #000;
+$dark: #151517;
 $light: #fff;
 
 body.dark-mode {
@@ -43,10 +43,12 @@ body.dark-mode {
     .close-icon {
       color: $light;
     }
-    button {
-      background-color: $dark;
-      color: $light;
-      border: 1px solid $light;
+    li:last-child {
+      a {
+        background-color: $dark;
+        color: $light;
+        border: 1px solid $light;
+      }
     }
   }
   #hamburger {
@@ -151,10 +153,12 @@ body.light-mode {
     .close-icon {
       color: $light;
     }
-    button {
-      background-color: $dark;
-      color: $light;
-      border: 1px solid $light;
+    li:last-child {
+      a {
+        background-color: $dark;
+        color: $light;
+        border: 1px solid $light;
+      }
     }
   }
   #hamburger {

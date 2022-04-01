@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 import SocialLinks from "./social-links";
 import ColorModeSelector from "./color-mode-selector";
+import resumePdf from "../static/joshua_mabry_resume.pdf";
 
 export interface MenuParams {
   menuItems: { title: string; link: string }[];
@@ -42,10 +43,10 @@ const MobileMenu = ({
             );
           })}
           <li>
-            <button>
+            <a href={resumePdf} target="_blank">
               <i className="fa fa-download"></i>
               Resume
-            </button>
+            </a>
           </li>
         </ul>
       </nav>
