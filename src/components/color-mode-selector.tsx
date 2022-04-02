@@ -5,12 +5,13 @@ const ColorModeSelector = ({ darkMode, setDarkMode }) => {
     <div className="toggle-theme">
       <input
         type="checkbox"
-        id="switch"
+        id="mode-selector"
+        name="mode-selector"
         checked={darkMode}
         onClick={() => setDarkMode(!darkMode)}
         readOnly
       />
-      <label htmlFor="switch">Toggle</label>
+      <label htmlFor="mode-selector">Toggle</label>
     </div>
   );
 };
