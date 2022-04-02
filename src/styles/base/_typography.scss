@@ -37,7 +37,7 @@ p {
   font-size: 14px;
 }
 #logo {
-  button {
+  a {
     font-family: $tertiary-font;
     font-size: 40px;
   }
@@ -54,12 +54,7 @@ p {
     font-size: 14px;
   }
 }
-.menu li a.active {
-  font-weight: 700;
-  .current-section {
-    opacity: 1;
-  }
-}
+.menu li.active,
 .menu li a:hover {
   font-weight: 700;
 }

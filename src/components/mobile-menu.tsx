@@ -28,14 +28,13 @@ const MobileMenu = ({
         <ul>
           {menuItems.map((item, index) => {
             return (
-              <li key={index}>
-                <a
-                  href={item.link}
-                  onClick={(e) => {
-                    scrollToSection(e);
-                    setToggled(!toggled);
-                  }}
-                >
+              <li
+                key={index}
+                className={
+                  window.location.href.includes(item.link) ? "active" : ""
+                }
+              >
+                <a href={item.link} onClick={() => setToggled(!toggled)}>
                   {item.title}
                   <span className="current-section"></span>
                 </a>

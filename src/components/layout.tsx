@@ -21,14 +21,9 @@ export default function Layout({ children, scrollToSection }) {
       />
       <SEO></SEO>
       <span id="logo">
-        <button
-          onClick={() => {
-            window.scroll(0, 0);
-            setMenuToggled(false);
-          }}
-        >
+        <a href="#top" onClick={() => setMenuToggled(false)}>
           m
-        </button>
+        </a>
       </span>
       <button id="hamburger" onClick={() => setMenuToggled(!menuToggled)}>
         <i className={`fa ${menuToggled ? "fa-times" : "fa-bars"}`}></i>

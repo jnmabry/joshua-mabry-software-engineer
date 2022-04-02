@@ -2,6 +2,8 @@ import * as React from "react";
 import ProjectCard from "../components/project-card";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
+import resumePdf from "../static/joshua_mabry_resume.pdf";
+import portfolioImage from "../images/portfolio-site.png";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -60,7 +62,11 @@ class IndexPage extends React.Component {
           <p>
             Below you will a find a collection of personal projects that I have
             recently worked on in my free time. If you're interested in my work
-            related projects or experience, please a take look at my resume or{" "}
+            related projects or experience, please a take look at my{" "}
+            <a href={resumePdf} target="_blank">
+              resume
+            </a>{" "}
+            or{" "}
             <a
               href="https://linkedin.com/in/jnmabry"
               target="_blank"

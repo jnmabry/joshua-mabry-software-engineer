@@ -8,15 +8,20 @@ export interface MenuParams {
   ) => {};
 }
 
-const Menu = ({ menuItems, scrollToSection }: MenuParams) => {
+const Menu = ({ menuItems }: MenuParams) => {
   return (
     <div className="menu">
       <nav>
         <ul>
           {menuItems.map((item, index) => {
             return (
-              <li key={index}>
-                <a href={item.link} onClick={(e) => scrollToSection(e)}>
+              <li
+                key={index}
+                className={
+                  window.location.href.includes(item.link) ? "active" : ""
+                }
+              >
+                <a href={item.link}>
                   {item.title}
                   <span className="current-section"></span>
                 </a>

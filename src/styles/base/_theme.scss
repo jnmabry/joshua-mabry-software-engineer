@@ -28,7 +28,7 @@ body.dark-mode {
   #logo {
     border: 2px solid $light;
     background-color: $dark;
-    button {
+    a {
       color: $light;
     }
   }
@@ -138,7 +138,7 @@ body.light-mode {
   #logo {
     border: 2px solid $dark;
     background-color: $light;
-    button {
+    a {
       color: $dark;
     }
   }
