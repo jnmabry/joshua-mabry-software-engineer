@@ -1,0 +1,37 @@
+/* === Self Hosted Fonts === */
+@font-face {
+  font-family: "Montserrat, Sans-Serif";
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat, Sans-Serif";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat, Sans-Serif";
+  src: url("../fonts/Montserrat-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* === Base Site Stylings === */
+@import "base/_global";
+@import "base/_layout";
+@import "base/_theme";
+@import "base/_typography";
+@import "base/_header";
+
+/* === Component Stylings === */
+@import "components/_menu";
+@import "components/_mobile-menu";
+@import "components/_project-card";
+@import "components/_social-links";
+@import "components/_color-mode-selector";
+@import "components/_sidemenu";

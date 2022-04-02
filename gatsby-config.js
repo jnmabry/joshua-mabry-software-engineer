@@ -1,9 +1,21 @@
 /** @type {import('gatsby').GatsbyConfig} */
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = "https://www.joshuamabry.com",
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === "production";
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: `Joshua Mabry - Software Engineer`,
     siteUrl: `https://www.joshuamabry.com`,
-    description: ``,
+    description:
+      `Joshua Mabry is a Software Engineer who specializes in full-stack development using frameworks such as Angular, React and Ruby on Rails.` +
+      `While mainly focusing on software developement, he also enjoys UI design.`,
     image: ``,
   },
   plugins: [
@@ -35,6 +47,27 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: "*" }],
+          },
+          "branch-deploy": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+          "deploy-preview": {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
     },
   ],
 };

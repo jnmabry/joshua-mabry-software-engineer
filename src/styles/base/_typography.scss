@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,700&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/brands.css");
+@import url("https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap");
+
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Roboto Mono", monospace;
+$tertiary-font: "UnifrakturMaguntia", cursive;
+
+html {
+  font-family: $primary-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 4.5em;
+  font-weight: 800;
+  line-height: 1.25em;
+  margin: 0px;
+}
+h2 {
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0px;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0px 0px 25px 0px;
+}
+p {
+  font-size: 16px;
+  line-height: 27px;
+}
+.menu {
+  font-size: 14px;
+}
+#logo {
+  a {
+    font-family: $tertiary-font;
+    font-size: 40px;
+  }
+}
+.menu,
+.color-mode {
+  font-family: $secondary-font;
+  font-weight: 300;
+}
+.menu {
+  button {
+    font-family: $secondary-font;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+.menu li.active,
+.menu li a:hover {
+  font-weight: 700;
+}
+
+input,
+label,
+button {
+  font-size: 16px;
+}
+
+.sidemenu {
+  .pages {
+    font-family: $secondary-font;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile-menu {
+    // display: none;
+    font-size: 24px;
+    line-height: 48px;
+  }
+}

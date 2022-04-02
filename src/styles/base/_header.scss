@@ -1,0 +1,51 @@
+header,
+.sidebar {
+  .hamburger-icon {
+    top: 25px;
+    right: 25px;
+    position: fixed;
+    display: flex;
+    justify-self: center;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0px;
+    justify-content: center;
+    background: none;
+    z-index: 2;
+    .fa {
+      font-size: 30px;
+    }
+    i {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  header {
+    // #logo {
+    //   top: 25px;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    // }
+    .hamburger-icon {
+      left: 25px;
+      top: 25px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  header {
+    // #logo {
+    //   top: 50px;
+    //   left: 50px;
+    // }
+    .hamburger-icon {
+      display: none;
+    }
+  }
+}
