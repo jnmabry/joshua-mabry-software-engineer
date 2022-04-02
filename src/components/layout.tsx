@@ -8,9 +8,16 @@ import Helmet from "react-helmet";
 
 import "../styles/main.scss";
 
-export default function Layout({ children, scrollToSection }) {
+export default function Layout({ children }) {
   const [darkMode, setDarkMode] = useState(true);
   const [menuToggled, setMenuToggled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const menuItems = [
+    { title: "01. About Me", link: "#about" },
+    { title: "02. Projects", link: "#projects" },
+    { title: "03. Let's Talk", link: "#contact" },
+  ];
 
   return (
     <>
@@ -21,21 +28,32 @@ export default function Layout({ children, scrollToSection }) {
       />
       <SEO></SEO>
       <span id="logo">
-        <a href="#top" onClick={() => setMenuToggled(false)}>
+        <a
+          href="#top"
+          onClick={() => {
+            setMenuToggled(false);
+            setActiveSection("#top");
+          }}
+        >
           m
         </a>
       </span>
       <button id="hamburger" onClick={() => setMenuToggled(!menuToggled)}>
         <i className={`fa ${menuToggled ? "fa-times" : "fa-bars"}`}></i>
       </button>
-      <Menu menuItems={menuItems} scrollToSection={scrollToSection} />
+      <Menu
+        menuItems={menuItems}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
       <MobileMenu
         menuItems={menuItems}
-        scrollToSection={scrollToSection}
         toggled={menuToggled}
         setToggled={setMenuToggled}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
       ></MobileMenu>
       <SideMenu darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="particles-container">
@@ -150,9 +168,3 @@ export default function Layout({ children, scrollToSection }) {
     </>
   );
 }
-
-const menuItems = [
-  { title: "01. About Me", link: "#about" },
-  { title: "02. Projects", link: "#projects" },
-  { title: "03. Let's Talk", link: "#contact" },
-];

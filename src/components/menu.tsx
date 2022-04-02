@@ -1,29 +1,28 @@
 import React, { Dispatch, SetStateAction } from "react";
 import resumePdf from "../static/joshua_mabry_resume.pdf";
 
-export interface MenuParams {
+export interface MenuProps {
   menuItems: { title: string; link: string }[];
-  scrollToSection: (
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {};
+  activeSection: string;
+  setActiveSection: Dispatch<SetStateAction<string>>;
 }
 
-const Menu = ({ menuItems }: MenuParams) => {
+const Menu = (props: MenuProps) => {
   return (
     <div className="menu">
       <nav>
         <ul>
-          {menuItems.map((item, index) => {
+          {props.menuItems.map((item, index) => {
             return (
               <li
                 key={index}
-                className={
-                  window.location.href.includes(item.link) ? "active" : ""
-                }
+                className={props.activeSection === item.link ? "active" : ""}
               >
-                <a href={item.link}>
+                <a
+                  href={item.link}
+                  onClick={() => props.setActiveSection(item.link)}
+                >
                   {item.title}
-                  <span className="current-section"></span>
                 </a>
               </li>
             );

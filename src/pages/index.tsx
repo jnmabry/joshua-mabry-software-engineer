@@ -6,28 +6,21 @@ import resumePdf from "../static/joshua_mabry_resume.pdf";
 import portfolioImage from "../images/mabry-logo.png";
 
 class IndexPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      pageSections: [],
-    };
-    this.scrollToSection = this.scrollToSection.bind(this);
-  }
-
-  componentDidMount() {
-    this.setState({ pageSections: document.getElementsByTagName("section") });
-  }
-
-  scrollToSection(e) {
-    e.preventDefault();
-    const sectionTitle = e.target.href.split("#")[1];
-    const section = this.state.pageSections.namedItem(`${sectionTitle}`);
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
+  projects = [
+    {
+      title: "Software Engineer Portfolio Site",
+      role: "Development and UI Design",
+      technologies: "GatsbyJS, React, Sass and Netlify",
+      description:
+        "A software engineering portfolio site that follows the JAMstack approach.",
+      github: "https://github.com/jnmabry/joshua-mabry-software-engineer",
+      image: portfolioImage,
+    },
+  ];
 
   render() {
     return (
-      <Layout scrollToSection={this.scrollToSection}>
+      <Layout>
         <section className="hero" id="top">
           <h1>
             Hey, I’m Josh Mabry. <br />
@@ -120,18 +113,6 @@ class IndexPage extends React.Component {
       </Layout>
     );
   }
-
-  projects = [
-    {
-      title: "Software Engineer Portfolio Site",
-      role: "Development and UI Design",
-      technologies: "GatsbyJS, React, Sass and Netlify",
-      description:
-        "A software engineering portfolio site that follows the JAMstack approach.",
-      github: "https://github.com/jnmabry/joshua-mabry-software-engineer",
-      image: portfolioImage,
-    },
-  ];
 }
 
 export default IndexPage;

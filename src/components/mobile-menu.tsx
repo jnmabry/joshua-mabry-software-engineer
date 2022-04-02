@@ -5,22 +5,22 @@ import resumePdf from "../static/joshua_mabry_resume.pdf";
 
 export interface MenuParams {
   menuItems: { title: string; link: string }[];
-  scrollToSection: (
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {};
   toggled: boolean;
   setToggled: Dispatch<SetStateAction<boolean>>;
   darkMode: boolean;
   setDarkMode: Dispatch<SetStateAction<boolean>>;
+  activeSection: string;
+  setActiveSection: Dispatch<SetStateAction<string>>;
 }
 
 const MobileMenu = ({
   menuItems,
-  scrollToSection,
   toggled,
   setToggled,
   darkMode,
   setDarkMode,
+  activeSection,
+  setActiveSection,
 }: MenuParams) => {
   return (
     <div className={`mobile-menu ${toggled ? "open" : "closed"}`}>
@@ -30,13 +30,16 @@ const MobileMenu = ({
             return (
               <li
                 key={index}
-                className={
-                  window.location.href.includes(item.link) ? "active" : ""
-                }
+                className={activeSection === item.link ? "active" : ""}
               >
-                <a href={item.link} onClick={() => setToggled(!toggled)}>
+                <a
+                  href={item.link}
+                  onClick={() => {
+                    setToggled(!toggled);
+                    setActiveSection(item.link);
+                  }}
+                >
                   {item.title}
-                  <span className="current-section"></span>
                 </a>
               </li>
             );
