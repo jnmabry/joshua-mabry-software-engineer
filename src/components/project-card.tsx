@@ -28,7 +28,10 @@ const ProjectCard = ({ project }) => {
           </a>
         )}
       </div>
-      <div className="image"></div>
+      <div
+        className="image"
+        style={{ backgroundImage: `url(${project.image})` }}
+      ></div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import ProjectCard from "../components/project-card";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import resumePdf from "../static/joshua_mabry_resume.pdf";
-import portfolioImage from "../images/portfolio-site.png";
+import portfolioImage from "../images/mabry-logo.png";
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -129,6 +129,7 @@ class IndexPage extends React.Component {
       description:
         "A software engineering portfolio site that follows the JAMstack approach.",
       github: "https://github.com/jnmabry/joshua-mabry-software-engineer",
+      image: portfolioImage,
     },
   ];
 }

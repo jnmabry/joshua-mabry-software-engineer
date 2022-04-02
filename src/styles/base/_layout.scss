@@ -49,6 +49,9 @@ section {
     }
     .image {
       height: 100%;
+      .gatsby-image-wrapper {
+        border-radius: 15px;
+      }
     }
   }
   &.portfolio {
