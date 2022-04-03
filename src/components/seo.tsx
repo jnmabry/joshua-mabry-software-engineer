@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
-import landingPage from "../static/joshua-mabry-portfolio-landing-page.png";
+import landingPage from "../static/joshua-mabry-portfolio-landing-page-light.png";
 
 const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
